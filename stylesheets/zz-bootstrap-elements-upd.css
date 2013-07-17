@@ -1,0 +1,387 @@
+@font-face{
+  font-family:                  'FontAwesome';
+  src:                          url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.eot');
+  src:                          url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.eot?#iefix')        format('embedded-opentype'),
+                                url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.woff')              format('woff'),
+                                url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.ttf')               format('truetype'),
+                                url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.svg#FontAwesome')   format('svg');
+  font-weight:                  normal;
+  font-style:                   normal;
+}
+body{
+/*background-colors: 000000; 666666; EEEEEE; F8F8F8; FFFFFF;*/
+/*background-image: url("http://autooboz.info/wp-content/uploads/2010/11/shiny-vopros-otvet3.jpg");*/
+  background-color: #FFFFFF;
+}
+
+/* Кнопка. Блочная модель и размеры. */
+.btn {
+  display:                inline-block;
+  border:                 0;
+  height:                 32px;
+  margin:                 6px;
+  padding:                0 8px;
+  cursor:                 pointer;
+  font:                   14px/32px bold arial,sans-serif;;
+  text-align:             center;
+  text-decoration:        none;
+  text-shadow:            none;
+  vertical-align:         middle;
+  -webkit-user-select:    none;
+     -moz-user-select:    none;
+      -ms-user-select:    none;
+          user-select:    none;
+  -webkit-border-radius:  2px;
+     -moz-border-radius:  2px;
+          border-radius:  2px;
+  -webkit-box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+     -moz-box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+          box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Кнопка. Общие модели состояний. */
+
+.btn:hover,
+.btn:focus {
+  background-position:    0;
+  outline:                none;
+  -webkit-box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+     -moz-box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+          box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+}
+
+.btn.disabled,
+.btn.disabled:active,
+.btn.disabled:hover,
+.btn[disabled],
+.btn[disabled]:active,
+.btn[disabled]:hover {
+  background-image:       none;
+  -webkit-box-shadow:     none;
+     -moz-box-shadow:     none;
+          box-shadow:     none;
+}
+
+/* Кнопка. Цветовая схема модели состояния. Серая (по умолчанию). */
+
+.btn {
+  color:                  #606060;
+  border-color:           #C6C6C6;
+  background-color:       #F8F8F8;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#F8F8F8),to(#ECECEC));
+  background-image:       -webkit-linear-gradient(top,#F8F8F8,#ECECEC);
+  background-image:       -moz-linear-gradient(top,#F8F8F8,#ECECEC);
+  background-image:       -ms-linear-gradient(top,#F8F8F8,#ECECEC);
+  background-image:       -o-linear-gradient(top,#F8F8F8,#ECECEC);
+  background-image:       linear-gradient(top,#F8F8F8,#ECECEC);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#f8f8f8',EndColorStr='#ececec');
+}
+
+.btn:hover,
+.btn:focus
+.btn:active,
+.btn.active {
+  border-color:           #BBB;
+  background-color:       #FFF;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#FDFDFD),to(#ECECEC));
+  background-image:       -webkit-linear-gradient(top,#FDFDFD,#ECECEC);
+  background-image:       -moz-linear-gradient(top,#FDFDFD,#ECECEC);
+  background-image:       -ms-linear-gradient(top,#FDFDFD,#ECECEC);
+  background-image:       -o-linear-gradient(top,#FDFDFD,#ECECEC);
+  background-image:       linear-gradient(top,#FDFDFD,#ECECEC);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#FDFDFD',EndColorStr='#ECECEC');
+}
+
+.btn:active,
+.btn.active {
+  -webkit-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.btn.disabled,
+.btn.disabled:active,
+.btn.disabled:hover,
+.btn[disabled],
+.btn[disabled]:active,
+.btn[disabled]:hover {
+  color:                  #AFAFAF;
+  border-color:           #C6C6C6;
+  background-color:       #ECECEC;
+}
+
+/* Кнопка. Цветовая схема модели состояния. Синяя. */
+
+.btn-primary {
+  color:                  #FFFFFF;
+  border-color:           #3079ED;
+  background-color:       #4D90FE;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#4D90FE),to(#4787ED));
+  background-image:       -webkit-linear-gradient(top,#4D90FE,#4787ED);
+  background-image:       -moz-linear-gradient(top,#4D90FE,#4787ED);
+  background-image:       -ms-linear-gradient(top,#4D90FE,#4787ED);
+  background-image:       -o-linear-gradient(top,#4D90FE,#4787ED);
+  background-image:       linear-gradient(top,#4D90FE,#4787ED);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#4d90fe',EndColorStr='#4787ed');
+}
+
+.btn-primary:hover,
+.btn-primary:focus
+.btn-primary:active,
+.btn-primary.active {
+  color:                  #FFFFFF;
+  border-color:           #2F5BB7;
+  background-color:       #357ae8;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#357ae8));
+  background-image:       -webkit-linear-gradient(top,#4d90fe,#357ae8);
+  background-image:       -moz-linear-gradient(top,#4d90fe,#357ae8);
+  background-image:       -ms-linear-gradient(top,#4d90fe,#357ae8);
+  background-image:       -o-linear-gradient(top,#4d90fe,#357ae8);
+  background-image:       linear-gradient(top,#4d90fe,#357ae8);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#4d90fe',EndColorStr='#357ae8');
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  -webkit-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+     -moz-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+          box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+}
+
+.btn-primary.disabled,
+.btn-primary.disabled:active,
+.btn-primary.disabled:hover,
+.btn-primary[disabled],
+.btn-primary[disabled]:active,
+.btn-primary[disabled]:hover {
+  color:                  #A9CBFF;
+  border-color:           #3079ed;
+  background-color:       #357ae8;
+}
+
+/* Кнопка. Цветовая схема модели состояния. Бирюза. */
+
+.btn-info {
+  color:                  #FFFFFF;
+  border-color:           #2F96B4;
+  background-color:       #49AFCD;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#2CABD1),to(#2F96B4));
+  background-image:       -webkit-linear-gradient(top,#2CABD1,#2F96B4);
+  background-image:       -moz-linear-gradient(top,#2CABD1,#2F96B4);
+  background-image:       -ms-linear-gradient(top,#2CABD1,#2F96B4);
+  background-image:       -o-linear-gradient(top,#2CABD1,#2F96B4);
+  background-image:       linear-gradient(top,#2CABD1,#2F96B4);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#2CABD1',EndColorStr='#2F96B4');
+}
+
+.btn-info:hover,
+.btn-info:focus
+.btn-info:active,
+.btn-info.active {
+  color:                  #FFFFFF;
+  border-color:           #1F6377;
+  background-color:       #49AFCD;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#30ADD3),to(#288EAC));
+  background-image:       -webkit-linear-gradient(top,#30ADD3,#288EAC);
+  background-image:       -moz-linear-gradient(top,#30ADD3,#288EAC);
+  background-image:       -ms-linear-gradient(top,#30ADD3,#288EAC);
+  background-image:       -o-linear-gradient(top,#30ADD3,#288EAC);
+  background-image:       linear-gradient(top,#30ADD3,#288EAC);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#30ADD3',EndColorStr='#288EAC');
+}
+
+.btn-info:active,
+.btn-info.active {
+  -webkit-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+     -moz-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+          box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+}
+
+.btn-info.disabled,
+.btn-info.disabled:active,
+.btn-info.disabled:hover,
+.btn-info[disabled],
+.btn-info[disabled]:active,
+.btn-info[disabled]:hover {
+  color:                  #A9CBFF;
+  border-color:           #2F96B4;
+  background-color:       #288EAC;
+}
+
+/* Кнопка. Цветовая схема модели состояния. Зеленая. */
+
+.btn-success {
+  color:                  #FFFFFF;
+  border-color:           #51A351;
+  background-color:       #51A351;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#57C557),to(#51A351));
+  background-image:       -webkit-linear-gradient(top,#57C557,#51A351);
+  background-image:       -moz-linear-gradient(top,#57C557,#51A351);
+  background-image:       -ms-linear-gradient(top,#57C557,#51A351);
+  background-image:       -o-linear-gradient(top,#57C557,#51A351);
+  background-image:       linear-gradient(top,#57C557,#51A351);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#57C557',EndColorStr='#51A351');
+}
+
+.btn-success:hover,
+.btn-success:focus
+.btn-success:active,
+.btn-success.active {
+  color:                  #FFFFFF;
+  border-color:           #387038;
+  background-color:       #49AFCD;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#57C557),to(#439E43));
+  background-image:       -webkit-linear-gradient(top,#57C557,#439E43);
+  background-image:       -moz-linear-gradient(top,#57C557,#439E43);
+  background-image:       -ms-linear-gradient(top,#57C557,#439E43);
+  background-image:       -o-linear-gradient(top,#57C557,#439E43);
+  background-image:       linear-gradient(top,#57C557,#439E43);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#57C557',EndColorStr='#439E43');
+}
+
+.btn-success:active,
+.btn-success.active {
+  -webkit-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+     -moz-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+          box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+}
+
+.btn-success.disabled,
+.btn-success.disabled:active,
+.btn-success.disabled:hover,
+.btn-success[disabled],
+.btn-success[disabled]:active,
+.btn-success[disabled]:hover {
+  color:                  #A7E797;
+  border-color:           #51A351;
+  background-color:       #439E43;
+}
+
+/* Кнопка. Цветовая схема модели состояния. Желтая. */
+
+.btn-warning {
+  color:                  #FFFFFF;
+  border-color:           #F89406;
+  background-color:       #FAA732;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#FFB349),to(#F89406));
+  background-image:       -webkit-linear-gradient(top,#FFB349,#F89406);
+  background-image:       -moz-linear-gradient(top,#FFB349,#F89406);
+  background-image:       -ms-linear-gradient(top,#FFB349,#F89406);
+  background-image:       -o-linear-gradient(top,#FFB349,#F89406);
+  background-image:       linear-gradient(top,#FFB349,#F89406);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFB349',EndColorStr='#F89406');
+}
+
+.btn-warning:hover,
+.btn-warning:focus
+.btn-warning:active,
+.btn-warning.active {
+  color:                  #FFFFFF;
+  border-color:           #D37F08;
+  background-color:       #FAA732;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#FFB349),to(#F89406));
+  background-image:       -webkit-linear-gradient(top,#FFB349,#E78801);
+  background-image:       -moz-linear-gradient(top,#FFB349,#F89406);
+  background-image:       -ms-linear-gradient(top,#FFB349,#F89406);
+  background-image:       -o-linear-gradient(top,#FFB349,#F89406);
+  background-image:       linear-gradient(top,#FFB349,#F89406);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFB349',EndColorStr='#F89406');
+}
+
+.btn-warning:active,
+.btn-warning.active {
+  -webkit-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+     -moz-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+          box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+}
+
+.btn-warning.disabled,
+.btn-warning.disabled:active,
+.btn-warning.disabled:hover,
+.btn-warning[disabled],
+.btn-warning[disabled]:active,
+.btn-warning[disabled]:hover {
+  color:                  #F5E8B5;
+  border-color:           #F89406;
+  background-color:       #F89406;
+}
+
+/* Кнопка. Цветовая схема модели состояния. Красная. */
+
+.btn-danger {
+  color:                  #FFFFFF;
+  border-color:           rgba(0, 0, 0, 0);
+  background-color:       #D14836;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#DD4B39),to(#D14836));
+  background-image:       -webkit-linear-gradient(top,#DD4B39,#D14836);
+  background-image:       -moz-linear-gradient(top,#DD4B39,#D14836);
+  background-image:       -ms-linear-gradient(top,#DD4B39,#D14836);
+  background-image:       -o-linear-gradient(top,#DD4B39,#D14836);
+  background-image:       linear-gradient(top,#DD4B39,#D14836);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#dd4b39',EndColorStr='#d14836');
+}
+
+.btn-danger:hover,
+.btn-danger:focus
+.btn-danger:active,
+.btn-danger.active {
+  color:                  #FFFFFF;
+  border-color:           #B0281A;
+  border-bottom-color:    #AF301F;
+  background-color:       #C53727;
+  background-image:       -webkit-gradient(linear,left top,left bottom,from(#DD4B39),to(#C53727));
+  background-image:       -webkit-linear-gradient(top,#DD4B39,#C53727);
+  background-image:       -moz-linear-gradient(top,#DD4B39,#C53727);
+  background-image:       -ms-linear-gradient(top,#DD4B39,#C53727);
+  background-image:       -o-linear-gradient(top,#DD4B39,#C53727);
+  background-image:       linear-gradient(top,#DD4B39,#C53727);
+  filter:                 progid:DXImageTransform.Microsoft.gradient(startColorStr='#dd4b39',EndColorStr='#c53727');
+}
+
+.btn-danger:active,
+.btn-danger.active {
+  -webkit-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+     -moz-box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+          box-shadow:     0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 6px -1px rgba(0,0,0,0.3);
+}
+
+.btn-danger.disabled,
+.btn-danger.disabled:active,
+.btn-danger.disabled:hover,
+.btn-danger[disabled],
+.btn-danger[disabled]:active,
+.btn-danger[disabled]:hover {
+  color:                  #E0AAA3;
+  border-color:           #B0281A;
+  background-color:       #C53727;
+}
+
+
+/* ---------------------------------------------------------- */
+input[type="text"] {
+  display:                inline-block;
+  border:                 1px solid #FFFFFF;
+  height:                 30px;
+  margin:                 6px;
+  padding:                0 8px;
+  cursor:                 auto;
+  color:                  #000000;
+  font:                   14px/30px bold arial,sans-serif;;
+  text-align:             left;
+  text-decoration:        none;
+  text-shadow:            none;
+  vertical-align:         middle;
+  -webkit-border-radius:  2px;
+     -moz-border-radius:  2px;
+          border-radius:  2px;
+  -webkit-box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+     -moz-box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+          box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+}
+
+input[type="text"]:focus {
+  border:                 1px solid #4D90FE;
+  -webkit-box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+     -moz-box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+          box-shadow:     0 2px 6px rgba(0,0,0,0.3);
+}
