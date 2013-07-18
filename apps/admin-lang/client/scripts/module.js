@@ -1,1 +1,1 @@
-alert("!");
+var tmp = function(){alert("!");}
