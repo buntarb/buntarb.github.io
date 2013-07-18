@@ -3,7 +3,7 @@ angular.module('zz', []).
     $routeProvider.
       when(
         '/apps/admin-lang', {
-          templateUrl: '/apps/admin-lang/client/module.html'/*, 
+          templateUrl: '/apps/admin-lang/client/templates/module.html'/*, 
           controller: AdminLangModuleCtrl*/
         }).
       otherwise({redirectTo: '/index.htm'});
