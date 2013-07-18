@@ -28,7 +28,7 @@
 @font-face {
   font-family: 'ImazzineIcons';
   src: url('../fonts/imazzine-icons.eot?v=3.2.1');
-  src: url('../fonts/imazzine-icons.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../fonts/imazzine-icons.woff?v=3.2.1') format('woff'), url('../fonts/imazzine-icons.ttf?v=3.2.1') format('truetype'), url('../fonts/imazzine-icons.svg#fontawesomeregular?v=3.2.1') format('svg');
+  src: url('../fonts/imazzine-icons.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../fonts/imazzine-icons.woff?v=3.2.1') format('woff'), url('../fonts/imazzine-icons.ttf?v=3.2.1') format('truetype'), url('../fonts/imazzine-icons.svg#imazzineicons?v=3.2.1') format('svg');
   font-weight: normal;
   font-style: normal;
 }
