@@ -1,5 +1,4 @@
-﻿/*global angular*/
-(function () {
+﻿(function () {
     'use strict';
     var regModules = ["ng"];
     
