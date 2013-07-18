@@ -1,1 +1,16 @@
-<a class="btn btn-primary" ng-controller="caption"><i class="icon-save"></i>{{ButtonCapt}}</a>
+<a class="btn btn-primary" ng-controller="Caption"><i class="icon-save"></i>{{ButtonCapt}}</a>
+<hr>
+<div ng-controller="Date">
+    <input type="text" ng-click="toggleCollapse()" value="{{dt | date:'dd-MM-yyyy'}}">
+    <div collapse="isCollapsed">
+        <datepicker
+                ng-model="dt"
+                show-weeks="showWeeks"
+                starting-day="1"
+                date-disabled="disabled(date, mode)"
+                min="minDate"
+                max="'2015-06-22'">
+        </datepicker>
+        <button class="btn" ng-click="today()">Today</button>
+    </div>
+</div>
