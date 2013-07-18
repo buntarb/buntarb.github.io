@@ -1,3 +1,4 @@
-function ModuleCtrl($scope, $routeParams){
-  $scope.ButtonCapt = 'Button caption';
-}
+angular.module('admin-lang', [])
+    .controller('caption', ['$scope', function ($scope){
+        $scope.ButtonCapt = 'Button Caption';
+    }])
