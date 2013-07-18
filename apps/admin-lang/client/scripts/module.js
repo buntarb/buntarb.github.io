@@ -1,1 +1,1 @@
-var tmp = function(){alert("!");}
+function module()
