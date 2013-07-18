@@ -8,8 +8,8 @@ angular.module('zz', ['loadOnDemand', 'ui.bootstrap'])
     .config(['$loadOnDemandProvider', function($loadOnDemandProvider){
         var modules = [{
                 name: 'admin-lang',
-                script: 'apps/admin-lang/client/scripts/module.js',
-                template: 'apps/admin-lang/client/templates/module.html'
+                script: 'apps/admin-lang/client/script/module.js',
+                template: 'apps/admin-lang/client/template/module.html'
             }];
         $loadOnDemandProvider.config(modules);
     }]);
