@@ -6,5 +6,5 @@ angular.module('zz', []).
           templateUrl: '/apps/admin-lang/client/module.html'/*, 
           controller: AdminLangModuleCtrl*/
         }).
-      otherwise({redirectTo: '/phones'});
+      otherwise({redirectTo: '/index.htm'});
   }]);
