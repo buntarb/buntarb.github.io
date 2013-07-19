@@ -12,4 +12,8 @@ angular.module('zz', ['loadOnDemand', 'ui.bootstrap'])
                 template: 'apps/admin-lang/client/template/module.html'
             }];
         $loadOnDemandProvider.config(modules);
+    }])
+    .controller('NavbarCtrl', ['$scope', function($scope){
+        $scope.PhoneMenuCollapse = true;
     }]);
+    
