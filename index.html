@@ -7,6 +7,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false">
       <meta name="HandheldFriendly" content="True">
       <meta name="MobileOptimized" content="320">
+      <!-- JS Libs -->
+      <script src="/libs/client/script/ang.js"></script>
+      <script src="/libs/client/script/gui.js"></script>
+      <script src="/libs/client/script/upl.js"></script>
+      <script src="/libs/client/script/cfg.js"></script>
     <!-- SCC Libs -->
       <link rel="stylesheet" href="/libs/client/css/elem.css">
       <link rel="stylesheet" href="/libs/client/css/icon.css">
@@ -21,7 +26,7 @@
 	  <a class="brand" href="/">Buntarb</a>
           <div ng-class="CurrentPhoneMenuClass" ng-style="CurrentPhoneMenuHeight">
             <ul class="nav">
-              <li><a href="/" ng-click="TogglePhoneMenuClass()">Home</a></li>
+              <li><a href="/#!/" ng-click="TogglePhoneMenuClass()">Home</a></li>
               <li><a href="/#!/apps/admin-lang" ng-click="TogglePhoneMenuClass()">Admin-Lang</a></li>
             </ul>
           </div>
@@ -29,10 +34,5 @@
       </div>
     </div>
     <div ng-view></div>
-    <!-- JS Libs -->
-      <script src="/libs/client/script/ang.js"></script>
-      <script src="/libs/client/script/gui.js"></script>
-      <script src="/libs/client/script/upl.js"></script>
-      <script src="/libs/client/script/cfg.js"></script>
   </body>
 </html>
