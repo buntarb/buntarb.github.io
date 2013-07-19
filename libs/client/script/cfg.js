@@ -16,11 +16,11 @@ angular.module('zz', ['loadOnDemand', 'ui.bootstrap'])
     .controller('NavbarCtrl', ['$scope', function($scope){
         $scope.CurrentPhoneMenuState = false;
         $scope.CurrentPhoneMenuClass = "nav-collapse collapse";
-        $scope.CurrentPhoneMenuHeight = "0px";
+        $scope.CurrentPhoneMenuHeight = {height: "0px"};
         $scope.TogglePhoneMenuClass = function(){
             $scope.CurrentPhoneMenuState = !$scope.CurrentPhoneMenuState;
             $scope.CurrentPhoneMenuClass = ($scope.CurrentPhoneMenuState) ? "nav-collapse in collapse" : "nav-collapse collapse";
-            $scope.CurrentPhoneMenuHeight = ($scope.CurrentPhoneMenuState) ? "auto" : "0px";
+            $scope.CurrentPhoneMenuHeight = ($scope.CurrentPhoneMenuState) ? {height: "auto"} : {height: "0px"};
         }
     }]);
     
