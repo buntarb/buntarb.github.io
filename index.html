@@ -13,16 +13,10 @@
     <div class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavbarCtrl">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand hidden-phone" href="#">Project Name</a>
-          <div class="hidden-phone">
+		      <a class="btn btn-navbar collapsed" ng-click="TogglePhoneMenuClass()"><i class="icon-chevron-down"></i></a>
+		      <a class="brand" href="/">Buntarb</a>
+          <div ng-class="CurrentPhoneMenuClass" ng-style="CurrentPhoneMenuHeight">
             <ul class="nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/#!/apps/admin-lang">Admin-Lang</a></li>
-            </ul>
-          </div>
-          <div class="visible-phone">
-            <a class="btn" ng-click="PhoneMenuCollapse = !PhoneMenuCollapse"><i class="icon-chevron-down"></i></a>
-            <ul class="nav nav-tabs nav-stacked" collapse="PhoneMenuCollapse">
               <li><a href="/">Home</a></li>
               <li><a href="/#!/apps/admin-lang">Admin-Lang</a></li>
             </ul>
