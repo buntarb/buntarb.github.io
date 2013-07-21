@@ -1,4 +1,4 @@
-angular.module('zz', ['loadOnDemand', 'ui.bootstrap'])
+angular.module('zz', ['loadOnDemand', 'ui.bootstrap', 'zz.gui.navbar'])
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
         $locationProvider.hashPrefix('!');
         $routeProvider
@@ -12,15 +12,5 @@ angular.module('zz', ['loadOnDemand', 'ui.bootstrap'])
                 template: 'apps/admin-lang/client/template/module.html'
             }];
         $loadOnDemandProvider.config(modules);
-    }])
-    .controller('NavbarCtrl', ['$scope', function($scope){
-        $scope.CurrentPhoneMenuState = false;
-        $scope.CurrentPhoneMenuClass = "nav-collapse collapse";
-        $scope.CurrentPhoneMenuHeight = {height: "0px"};
-        $scope.TogglePhoneMenuClass = function(){
-            $scope.CurrentPhoneMenuState = !$scope.CurrentPhoneMenuState;
-            $scope.CurrentPhoneMenuClass = ($scope.CurrentPhoneMenuState) ? "nav-collapse in collapse" : "nav-collapse collapse";
-            $scope.CurrentPhoneMenuHeight = ($scope.CurrentPhoneMenuState) ? {height: "auto"} : {height: "0px"};
-        }
     }]);
     

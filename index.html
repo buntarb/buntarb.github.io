@@ -7,32 +7,27 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false">
       <meta name="HandheldFriendly" content="True">
       <meta name="MobileOptimized" content="320">
-      <!-- JS Libs -->
+    <!-- JS Libs -->
       <script src="/libs/client/script/ang.js"></script>
+      <script src="/libs/client/script/bui.js"></script>
       <script src="/libs/client/script/gui.js"></script>
       <script src="/libs/client/script/upl.js"></script>
       <script src="/libs/client/script/cfg.js"></script>
     <!-- SCC Libs -->
       <link rel="stylesheet" href="/libs/client/css/elem.css">
       <link rel="stylesheet" href="/libs/client/css/icon.css">
-      <link rel="stylesheet" href="/libs/client/css/cstm.css">
+      <!--<link rel="stylesheet" href="/libs/client/css/cstm.css">-->
       <link rel="stylesheet" href="/libs/client/css/page.css">
   </head>
   <body style="padding-top: 40px;">
-    <div class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavbarCtrl">
-      <div class="navbar-inner">
-        <div class="container">
-	  <a class="btn btn-navbar collapsed" ng-click="TogglePhoneMenuClass()"><i class="icon-chevron-down"></i></a>
-	  <a class="brand" href="/">Buntarb</a>
-          <div ng-class="CurrentPhoneMenuClass" ng-style="CurrentPhoneMenuHeight">
-            <ul class="nav">
-              <li><a href="/#!/" ng-click="TogglePhoneMenuClass()">Home</a></li>
-              <li><a href="/#!/apps/admin-lang" ng-click="TogglePhoneMenuClass()">Admin-Lang</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <navbar
+            brand-title="Buntarb"
+            brand-link="/#!/"
+            home-title="Home"
+            home-link="/#!/"
+            lang-title="Languages"
+            lang-link="/#!/apps/admin-lang">
+    </navbar>
     <div ng-view></div>
   </body>
 </html>
