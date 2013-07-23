@@ -1,11 +1,9 @@
 angular.module('zz', ['loadOnDemand', 'ngResource', 'ui.bootstrap', 'zz.gui.navbar'])
-	.factory('zzMenu', function($resource){
+	/*.factory('zzMenu', function($resource){
 		return $resource(
 			'/apps/menu/server/items.json',
 			{
-				//param: 'items',
-				//format: 'json',
-				//json_callback: 'JSON_CALLBACK'
+
 			},
 			{
 				query: {
@@ -13,7 +11,7 @@ angular.module('zz', ['loadOnDemand', 'ngResource', 'ui.bootstrap', 'zz.gui.navb
 				},
 				isArray: true
 			});
-	})
+	})*/
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
         $locationProvider.hashPrefix('!');
         $routeProvider
@@ -28,11 +26,15 @@ angular.module('zz', ['loadOnDemand', 'ngResource', 'ui.bootstrap', 'zz.gui.navb
             }];
         $loadOnDemandProvider.config(modules);
     }])
-	.controller('NavbarCtrl', ['$scope', 'zzMenu', function($scope, zzMenu){
-		$scope.menuItems = zzMenu.query();
+    /*.controller('NavbarCtrl', ['$scope', 'zzMenu', function($scope, zzMenu){
+        $scope.menuItems = zzMenu.query();
+        $scope.getItems = function(){
+            return $scope.menuItems;
+        }
+    }])*/
+	.controller('NavbarCtrl', ['$scope', function($scope){
+		/*$scope.menuItems = zzMenu.query();
 		$scope.getItems = function(){
-			console.log($scope.menuItems);
 			return $scope.menuItems;
-		}
+		}*/
 	}]);
-    

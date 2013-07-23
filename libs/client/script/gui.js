@@ -1,5 +1,18 @@
-angular.module('zz.gui.navbar', ['ui.bootstrap.transition'])
-    .directive('navbar', ['$transition', function($transition){
+angular.module('zz.gui.navbar', ['ngResource', 'ui.bootstrap.transition'])
+    .factory('zzMenu', function($resource){
+        return $resource(
+            '/apps/menu/server/items.json',
+            {
+
+            },
+            {
+                query: {
+                    method: 'GET'
+                },
+                isArray: true
+            });
+    })
+    .directive('navbar', ['zzMenu', '$transition', function(zzMenu, $transition){
         /**
          * Функция изменения высоты элемента с auto на фиксированное значение. Данная подмена необходима
          * для изменения высоты элемента средствами CSS.
@@ -30,7 +43,8 @@ angular.module('zz.gui.navbar', ['ui.bootstrap.transition'])
 				config: '@'
             },
 			controller: ['$scope', '$location', function($scope, $location){
-				$scope.items = $scope.$eval($scope.config);
+				//$scope.items = $scope.$eval($scope.config);
+                $scope.items = zzMenu.query();
 				$scope.selectedItem = '/#!'+$location.path();
 			}],
             link: function(scope, element, attrs){
