@@ -21,13 +21,11 @@
       <link rel="stylesheet" href="/libs/client/css/page.css">
   </head>
   <body style="padding-top: 40px;">
-	<div ng-controller="NavbarCtrl">
-		<navbar
-			brand-title="Buntarb"
-			brand-link="/#!/"
-			config="{{getItems()}}">
-		</navbar>
-    </div>
+	<navbar
+		brand-title="Buntarb"
+		brand-link="/#!/"
+		config="{{getItems()}}">
+	</navbar>
 	<div ng-view></div>
   </body>
 </html>
