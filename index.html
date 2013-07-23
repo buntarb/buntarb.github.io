@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html ng-app="zz">
+<html id="ng-app" ng-app="zz">
   <head>
     <!-- META Data -->
       <meta charset="utf-8">
     <!-- Mobile Optimization META Data -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
       <meta name="HandheldFriendly" content="True">
       <meta name="MobileOptimized" content="320">
     <!-- JS Libs -->
       <script src="/libs/client/script/ang.js"></script>
+	  <script src="/libs/client/script/res.js"></script>
       <script src="/libs/client/script/bui.js"></script>
       <script src="/libs/client/script/gui.js"></script>
       <script src="/libs/client/script/upl.js"></script>
@@ -20,14 +21,13 @@
       <link rel="stylesheet" href="/libs/client/css/page.css">
   </head>
   <body style="padding-top: 40px;">
-    <navbar
-            brand-title="Buntarb"
-            brand-link="/#!/"
-            home-title="Home"
-            home-link="/#!/"
-            lang-title="Languages"
-            lang-link="/#!/apps/admin-lang">
-    </navbar>
-    <div ng-view></div>
+	<div ng-controller="NavbarCtrl">
+		<navbar
+			brand-title="Buntarb"
+			brand-link="/#!/"
+			config="{{getItems()}}">
+		</navbar>
+    </div>
+	<div ng-view></div>
   </body>
 </html>

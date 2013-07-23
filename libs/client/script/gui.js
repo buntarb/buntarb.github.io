@@ -27,13 +27,14 @@ angular.module('zz.gui.navbar', ['ui.bootstrap.transition'])
             scope: {
                 brandTitle: '@',
                 brandLink: '@',
-                homeTitle: '@',
-                homeLink: '@',
-                langTitle: '@',
-                langLink: '@'
+				config: '@'
             },
+			controller: ['$scope', '$location', function($scope, $location){
+				$scope.items = $scope.$eval($scope.config);
+				$scope.selectedItem = '/#!'+$location.path();
+			}],
             link: function(scope, element, attrs){
-                /**
+				/**
                  * Объект DOM-элемента кнопки разворачивания/сворачивания меню для мобильных устройств.
                  * @type {*}
                  */
@@ -102,7 +103,6 @@ angular.module('zz.gui.navbar', ['ui.bootstrap.transition'])
                     }
                     isClosed = false;
                 }
-
                 /**
                  * Функция сворачивания меню.
                  */
@@ -117,6 +117,35 @@ angular.module('zz.gui.navbar', ['ui.bootstrap.transition'])
                     }
                 }
                 /**
+                 * Функция разворачивания/сворачивания меню.
+                 */
+				scope.toggleMenu = function(){
+					if(isClosed){
+                        Open();
+                    }else{
+                        Close();
+                    }
+				}
+                /**
+                 * Функция реакции при выборе пункта меню.
+                 */
+				scope.selectItem = function(link){
+					scope.selectedItem = link;
+					if(!isClosed){
+						Close();
+					}
+				};
+                /**
+                 * Функция отслеживания активного пункта меню.
+                 */
+				scope.isActiveItem = function(link){
+					if(scope.selectedItem === link){
+						return true;
+					}else{
+						return false;
+					}
+				}
+                /**
                  * Инициализация наблюдателя за изменением высоты меню.
                  */
                 scope.$watch(function(){return menuDom.scrollHeight;}, function(value){
@@ -128,16 +157,6 @@ angular.module('zz.gui.navbar', ['ui.bootstrap.transition'])
                                 fixUpHeight(scope, element, 'auto');
                             }
                         }
-                    }
-                });
-                /**
-                 * Инициация реакции на нажатие кнопки и запуск соответствующих функций разворачивания/сворачивания.
-                 */
-                button.bind('click', function(){
-                    if(isClosed){
-                        Open();
-                    }else{
-                        Close();
                     }
                 });
                 /**

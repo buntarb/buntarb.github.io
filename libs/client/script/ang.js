@@ -610,7 +610,10 @@ function copy(source, destination){
     }
   } else {
     if (source === destination) throw Error("Can't copy equivalent objects or arrays");
-    if (isArray(source)) {
+// buntarb.modification.start - fix issues #1044
+//    if (isArray(source)) {
+	if (isArray(source) && isArray(destination)) {
+// buntarb.modification.end - fix issues #1044
       destination.length = 0;
       for ( var i = 0; i < source.length; i++) {
         destination.push(copy(source[i]));
