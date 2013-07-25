@@ -1,11 +1,9 @@
 angular.module('zz.gui.navbar', ['ngResource', 'ui.bootstrap.transition'])
     .factory('zzMenu', function($resource){
         return $resource(
-            '/apps/menu/server/items.json',
-            {
-
-            },
-            {
+            //'/apps/menu/server/items.json',
+            '/libs/server/bootstrap.php',
+            {},{
                 query: {
                     method: 'GET'
                 },
