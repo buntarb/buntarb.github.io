@@ -10,6 +10,19 @@
         // Создание Объекта внедрения зависимостей
         $di = new Phalcon\DI\FactoryDefault();
 
+        // Установки шифрования
+        $di->set('crypt', function() {
+            $crypt = new Phalcon\Crypt();
+            $crypt->setKey('123321');
+            return $crypt;
+        });
+
+        // Установки кук
+        $di->set('cookies', function() {
+            $cookies = new Phalcon\Http\Response\Cookies();
+            return $cookies;
+        });
+
         // Регистрация представлений
         $di->set('view', function(){
             $view = new \Phalcon\Mvc\View();
@@ -19,8 +32,13 @@
 
         // Соединение с базой данных
         $di->set('mongo', function(){
-            $mongo = new Mongo("mongodb:///tmp/mongodb-27017.sock,localhost:27017");
-            return $mongo->selectDb("test");
+            $mongo = new Mongo();
+            return $mongo->selectDb("zz");
+        }, true);
+
+        // Загрузка менеджера коллеций
+        $di->set('collectionManager', function(){
+            return new Phalcon\Mvc\Collection\Manager();
         }, true);
 
         // Обработка запроса
@@ -29,7 +47,7 @@
         // Вывод результата
         echo $application->handle()->getContent();
 
-    }catch(Exception $e){
-        echo "PhalconException: ", $e->getMessage();
+    }catch(\Phalcon\Exception $e){
+        $e->getMessage();
     }
 ?>

@@ -1,4 +1,4 @@
-angular.module('zz', ['loadOnDemand', 'ngResource', 'ui.bootstrap', 'zz.gui.navbar'])
+angular.module('zz', ['loadOnDemand', 'gui.base', 'ui.bootstrap'])
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
         $locationProvider.hashPrefix('!');
         $routeProvider

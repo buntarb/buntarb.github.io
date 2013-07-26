@@ -1,16 +1,18 @@
-angular.module('zz.gui.navbar', ['ngResource', 'ui.bootstrap.transition'])
-    .factory('zzMenu', function($resource){
+angular.module('gui.base', ['ngResource', 'ui.bootstrap.transition'])
+    .factory('guiResource', function($resource){
         return $resource(
-            //'/apps/menu/server/items.json',
             '/libs/server/bootstrap.php',
-            {},{
-                query: {
-                    method: 'GET'
+            {
+				//param: 'value'
+			},
+			{
+                navbar: {
+                    method: 'POST'
                 },
                 isArray: true
             });
     })
-    .directive('navbar', ['zzMenu', '$transition', function(zzMenu, $transition){
+    .directive('navbar', ['guiResource', '$transition', function(guiResource, $transition){
         /**
          * Функция изменения высоты элемента с auto на фиксированное значение. Данная подмена необходима
          * для изменения высоты элемента средствами CSS.
@@ -36,14 +38,10 @@ angular.module('zz.gui.navbar', ['ngResource', 'ui.bootstrap.transition'])
             replace: true,
             templateUrl: '../libs/client/template/navbar/navbar.html',
             scope: {
-                brandTitle: '@',
-                brandLink: '@',
-				config: '@'
             },
 			controller: ['$scope', '$location', function($scope, $location){
-				//$scope.items = $scope.$eval($scope.config);
-                $scope.items = zzMenu.query();
-				$scope.selectedItem = '/#!'+$location.path();
+                $scope.rsp = guiResource.navbar();
+				$scope.selectedApp = '/#!'+$location.path();
 			}],
             link: function(scope, element, attrs){
 				/**
@@ -141,17 +139,21 @@ angular.module('zz.gui.navbar', ['ngResource', 'ui.bootstrap.transition'])
                 /**
                  * Функция реакции при выборе пункта меню.
                  */
-				scope.selectItem = function(link){
-					scope.selectedItem = link;
+				scope.selectApp = function(link){
+					scope.selectedApp = link;
 					if(!isClosed){
 						Close();
 					}
 				};
+
+                scope.updateApp = function(){
+                    scope.rsp = guiResource.navbar();
+                }
                 /**
                  * Функция отслеживания активного пункта меню.
                  */
-				scope.isActiveItem = function(link){
-					if(scope.selectedItem === link){
+				scope.isActiveApp = function(link){
+					if(scope.selectedApp === link){
 						return true;
 					}else{
 						return false;

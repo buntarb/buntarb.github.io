@@ -2,11 +2,11 @@
     <div class="navbar-inner">
         <div class="container">
             <a class="btn btn-navbar" ng-click="toggleMenu()"><i class="icon-reorder"></i></a>
-            <a class="brand" href="{{brandLink}}">{{brandTitle}}</a>
+            <a class="brand" href="{{rsp.brand.link}}"  ng-click="selectApp(rsp.brand.link); updateApp();">{{rsp.brand.title}}</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-					<li ng-repeat="item in items" ng-class="{'active': isActiveItem(item.link)}">
-						<a href="{{item.link}}" ng-click="selectItem(item.link)">{{item.title}}</a>
+					<li ng-repeat="app in rsp.apps" ng-class="{'active': isActiveApp(app.link)}">
+						<a href="{{app.link}}" ng-click="selectApp(app.link)">{{app.title}}</a>
 					</li>
                 </ul>
             </div>
