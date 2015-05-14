@@ -1,31 +1,12 @@
 <!DOCTYPE html>
-<html id="ng-app" ng-app="zz">
-  <head>
-    <!-- META Data -->
-      <meta charset="utf-8">
-    <!-- Mobile Optimization META Data -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-      <meta name="HandheldFriendly" content="True">
-      <meta name="MobileOptimized" content="320">
-    <!-- JS Libs -->
-      <script src="/libs/client/script/ang.js"></script>
-	  <script src="/libs/client/script/res.js"></script>
-      <script src="/libs/client/script/bui.js"></script>
-      <script src="/libs/client/script/gui.js"></script>
-      <script src="/libs/client/script/upl.js"></script>
-      <script src="/libs/client/script/cfg.js"></script>
-    <!-- SCC Libs -->
-      <link rel="stylesheet" href="/libs/client/css/elem.css">
-      <link rel="stylesheet" href="/libs/client/css/icon.css">
-      <!--<link rel="stylesheet" href="/libs/client/css/cstm.css">-->
-      <link rel="stylesheet" href="/libs/client/css/page.css">
-  </head>
-  <body style="padding-top: 40px;">
-	<navbar
-		brand-title="Buntarb"
-		brand-link="/#!/"
-		config="{{getItems()}}">
-	</navbar>
-	<div ng-view></div>
-  </body>
+<html id="root">
+    <head>
+        <title>ZDevs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <script src="script.js"></script>
+    </head>
+    <body id="app"></body>
+    <script>videtype.bootstrap();</script>
 </html>
