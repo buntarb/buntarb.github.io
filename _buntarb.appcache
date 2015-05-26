@@ -3,6 +3,7 @@ CACHE MANIFEST
 # Cache manifet version 1.0
 
 CACHE:
+
 index.html
 videtype.css
 videtype.js
@@ -11,6 +12,7 @@ images/logo.png
 fonts/ionicons/ionicons.eot
 fonts/ionicons/ionicons.svg
 fonts/ionicons/ionicons.ttf
+fonts/ionicons/ionicons.ttf?v=2.0.0
 fonts/ionicons/ionicons.woff
 fonts/awesome/FontAwesome.otf
 fonts/awesome/fontawesome-webfont.eot
@@ -20,4 +22,15 @@ fonts/awesome/fontawesome-webfont.woff
 fonts/awesome/fontawesome-webfont.woff2
 
 NETWORK:
-*
+
+# Google API (we can cache it?)
+https://oauth.googleusercontent.com/*
+https://accounts.google.com/*
+https://apis.google.com/*
+https://ssl.gstatic.com/*
+
+# Google Plus Data
+https://content.googleapis.com/*
+
+# Connection checking
+http://www.google.com/images/cleardot.gif*
