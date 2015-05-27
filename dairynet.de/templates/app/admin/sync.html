@@ -76,7 +76,7 @@
                 <tbody>
                 <tr data-ng-repeat="(key, group) in list( ) | groupBy: 'type'">
                     <td>
-                        {{ key }}
+                        {{ key + ' (#' + group.length + ')' }}
                         <ul>
                             <li data-ng-repeat="item in group">{{ item.id }}</li>
                         </ul>

@@ -18,7 +18,7 @@
 			"type":"Cattle",
 			"objectId":"182e564a-8a84-84a2-9e9e-4d7eb51387eb",
 			"direction":"TO_GLOBAL",
-			"status":"OK",
+			"status":"ERROR",
 			"directionOptions":[
 				"TO_LOCAL",
 				"TO_GLOBAL"
@@ -117,7 +117,7 @@
 			"type":"Cattle",
 			"objectId":"f65401d9-f394-1f14-f9f0-64f3acb738a5",
 			"direction":"TO_GLOBAL",
-			"status":"OK",
+			"status":"CONFLICT",
 			"directionOptions":[
 				"TO_LOCAL",
 				"TO_GLOBAL"
@@ -183,7 +183,7 @@
 			"type":"Cattle",
 			"objectId":"d5040f39-52cb-4ef0-dd3c-9dd303226aab",
 			"direction":"TO_GLOBAL",
-			"status":"OK",
+			"status":"CONFLICT",
 			"directionOptions":[
 				"TO_LOCAL",
 				"TO_GLOBAL"
@@ -249,7 +249,7 @@
 			"type":"Cattle",
 			"objectId":"9fc68751-0be9-3327-2393-c3288e7837c0",
 			"direction":"TO_GLOBAL",
-			"status":"OK",
+			"status":"CONFLICT",
 			"directionOptions":[
 				"TO_LOCAL",
 				"TO_GLOBAL"

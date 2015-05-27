@@ -46,7 +46,7 @@
 		function parse( ){
 
 			var currDate = undefined;
-			var state = "ok";
+			var state = "Ok";
 			var conflicts = 0;
 			var synced = 0;
 			var items = [];
@@ -61,7 +61,7 @@
 
 					items.push( val );
 					if( val['status'] === 'ERROR' ) state = "Failed";
-					if( val['status'] === 'Conflict' ) state = conflicts++;
+					if( val['status'] === 'CONFLICT' ) conflicts++;
 					synced++;
 
 				}else{
@@ -77,7 +77,7 @@
 					} );
 					items = [val];
 					currDate = val['syncDate'];
-					state = val['status'] === 'ERROR' ? "Failed" : "ok";
+					state = val['status'] === 'ERROR' ? "Failed" : "Ok";
 					conflicts = val['status'] === 'Conflict' ? 1 : 0;
 					synced = 1;
 				}
