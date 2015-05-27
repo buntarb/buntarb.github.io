@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="dairynet">
+<html data-ng-app="dairynet">
     <head>
-        <title>DairyNet</title>
+        <title data-ng-bind="pageTitle + '::DairyNet'"></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link href="dairynet.css" rel="stylesheet" type="text/css">
+        <link href="styles/units.css" rel="stylesheet" type="text/css">
+        <link href="styles/dairynet.css" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-mocks.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.4/angular-filter.js"></script>
         <script src="scripts/dairynet.js"></script>
+        <script src="scripts/common/constants/menu/admin.js"></script>
+        <script src="scripts/common/variables/admin/sync.js"></script>
+        <script src="scripts/controllers/admin/index.js"></script>
+        <script src="scripts/controllers/admin/sync.js"></script>
+        <script src="scripts/directives/dairynet-progress.js"></script>
+        <script src="scripts/mock/sync.js"></script>
     </head>
-    <body></body>
+    <body>
+        <div data-ng-view class="w-200un"></div>
+    </body>
 </html>

@@ -1,0 +1,59 @@
+html, body {
+
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+div, table, input {
+
+    box-sizing: border-box;
+}
+div[data-ng-view] {
+
+    display: block;
+    position: relative;
+    margin: 10px auto;
+}
+div[data-ng-controller] {
+
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.brick {
+
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin: 5px 0;
+    padding: 0;
+}
+.hidenizr {
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Styles for directive progress-wrapper */
+div#progress-wrapper {
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000066;
+    box-sizing: border-box;
+}
+div#progress-wrapper > div#progress-line {
+
+    display: block;
+    position: relative;
+    width: 0;
+    height: 100%;
+    background-color: #0065cd;
+}

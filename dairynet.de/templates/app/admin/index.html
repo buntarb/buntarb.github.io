@@ -1,0 +1,8 @@
+<div data-ng-controller="adminIndexCtrl">
+    <a
+        data-ng-repeat="item in items"
+        data-ng-href="{{ item['uri'] }}"
+        data-ng-bind="item['name']"
+        style="display: block;">
+    </a>
+</div>
