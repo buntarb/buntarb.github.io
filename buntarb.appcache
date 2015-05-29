@@ -2,8 +2,7 @@ CACHE MANIFEST
 
 # Cache manifet version 1.0
 
-#CACHE:
-
+CACHE:
 index.html
 videtype.css
 videtype.js
@@ -20,6 +19,5 @@ fonts/awesome/fontawesome-webfont.ttf
 fonts/awesome/fontawesome-webfont.woff
 fonts/awesome/fontawesome-webfont.woff2
 
-#NETWORK:
-#*
-#FALLBACK:
+NETWORK:
+*
