@@ -1,0 +1,27 @@
+CACHE MANIFEST
+
+# Cache manifet version 1.0
+
+CACHE
+
+index.html
+videtype.css
+videtype.js
+images/favicon.ico
+images/logo.png
+fonts/ionicons/ionicons.eot
+fonts/ionicons/ionicons.svg
+fonts/ionicons/ionicons.ttf
+fonts/ionicons/ionicons.woff
+fonts/awesome/FontAwesome.otf
+fonts/awesome/fontawesome-webfont.eot
+fonts/awesome/fontawesome-webfont.svg
+fonts/awesome/fontawesome-webfont.ttf
+fonts/awesome/fontawesome-webfont.woff
+fonts/awesome/fontawesome-webfont.woff2
+
+NETWORK
+
+*
+
+#FALLBACK
