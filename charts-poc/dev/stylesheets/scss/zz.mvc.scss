@@ -1,0 +1,179 @@
+// Copyright 2016 Artem Lytvynov <buntarb@gmail.com>. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS-IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @license Apache-2.0
+ * @copyright Artem Lytvynov <buntarb@gmail.com>
+ */
+
+// Importing styles from related modules.
+// Please, don't delete this import.
+@import "../../../node_modules/zz.styles/lib/stylesheets/scss/export";
+@import "d3";
+
+// Module styles.
+div {
+
+  box-sizing: border-box;
+}
+div#root{
+
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  float: left;
+  & > div.application {
+
+    display: block;
+    position: absolute;
+    float: left;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    & > div {
+
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+
+      // Layout field in application datarow
+      & > div.layout {
+
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+
+        // Layout dataset
+        & > div {
+
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+
+          // Layout datarow
+          & > div {
+
+            display: block;
+            position: relative;
+            float: left;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            background: #eeeeee;
+
+            & > h4 {
+
+              width: 100%;
+              height: 80px;
+              line-height: 80px;
+              margin: 0;
+              padding: 0 0 0 24px;
+            }
+
+            // View field in layout datarow
+            & > div.view {
+
+              display: block;
+              position: absolute;
+              float: left;
+              width: 100%;
+              top: 80px;
+              left: 0;
+              bottom: 0;
+              overflow-x: hidden;
+              overflow-y: visible;
+              background: #fafafa;
+
+              // View dataset
+              & > div {
+
+                // View datarow
+                & > div {
+
+                  // Title
+                  & > h4 {
+
+                    display: inline-block;
+                    position: relative;
+                    margin-left: 24px;
+                    color: rgba(0,0,0,.54);
+                  }
+
+                  // Widget field in view datarow
+                  & > div.widget {
+
+                    // Widget dataset
+                    & > div {
+
+                      // Widget datarow
+                      & > div.mdl-card.mdl-shadow--2dp {
+
+                        min-width: 350px;
+                        margin: 0 auto 24px;
+                        padding: 12px;
+
+                        & > h4{
+
+                          margin: 12px 0 12px 12px;
+                          color: #2179b4;
+                        }
+                        & > div {
+
+                          & > svg {
+
+                            display: block;
+                            margin: auto;
+                            padding: 0;
+                            box-sizing: border-box;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+div.mdl-card {
+
+  margin: auto;
+}
